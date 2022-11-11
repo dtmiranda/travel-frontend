@@ -1,8 +1,8 @@
 
 export default function NavBar(){
   return(
-    <nav className="bg-white border-gray-200 px-4 py-6 dark:bg-gray-900">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <nav className="bg-white border-gray-200 py-6 dark:bg-gray-900 ">
+      <div className="container flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-4">
       <a href="#" className="flex items-center">
         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">TravelNorth</span>
       </a>
