@@ -14,7 +14,7 @@ export default function Cover(){
             <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Thinking of tacking a break from every day's busy life? <br /> Don't worry, we take care of your trip.</p>
           </div>
 
-          <div>
+          <div className="sm: none">
             <Image className="max-w-full h-auto mx-auto rounded-tl-full rounded-br-full rounded-tr-full " src={coverMontain} alt="image description"/>
           </div>
         </div>
