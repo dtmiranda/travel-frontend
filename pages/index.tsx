@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Cover from '../components/Cover'
 import Category from '../components/Category'
 import DestinationCard from '../components/DestinationCard'
+import TrailCard from '../components/TrailCard'
 
 export default function Home() {
   return (
@@ -20,15 +21,31 @@ export default function Home() {
 
       </div>
 
-      <section className='mb-10 flex justify-center flex-col, items-center flex-wrap'>
+      <div className='mb-10 flex justify-center flex-col, items-center  flex-wrap'>
         <DestinationCard/>
         <DestinationCard/>
         <DestinationCard/>
-      </section>
-
-      <div className='flex justify-center items-center'>
-        <button type="button" className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Alternative</button>      
+        <DestinationCard/>
+        <DestinationCard/>
+        <DestinationCard/>
       </div>
+
+      <div className=' mb-10 flex justify-center'>
+        <button type="button" className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">See more</button>
+
+
+      </div>
+
+
+      <div className='mb-10 flex justify-between flex-col, items-center flex-wrap'>
+        <TrailCard/>
+        <TrailCard/>
+        <TrailCard/>
+        <TrailCard/>
+      </div>
+
+
+      
                       
       <Footer />
       

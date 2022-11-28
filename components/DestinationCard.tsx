@@ -6,7 +6,7 @@ import cardImage from '../assets/images/cover-poll.jpg'
 export default function DestinationCard(){
   return(
 
-    <Link href='#' className="my-5 mx-4 w-full max-w-sm bg-white rounded-lg shadow-md">
+    <div className="my-5 mx-4 w-full max-w-sm bg-white rounded-lg shadow-md">
         
         <Image className="p-4 rounded-t-lg" src={cardImage}alt="product image" />
         
@@ -30,7 +30,8 @@ export default function DestinationCard(){
                 
             </div>
         </div>
-    </Link>
+
+    </div>
 
   )
 }
