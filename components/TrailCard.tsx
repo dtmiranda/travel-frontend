@@ -5,7 +5,7 @@ import cardImage from '../assets/images/cover-poll.jpg'
 export default function NavBar(){
   return(
 
-    <div className="mx-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
+    <div className="my-5 mx-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
         <a href="#">
             <Image className="rounded-t-lg" src={cardImage} alt="" />
         </a>

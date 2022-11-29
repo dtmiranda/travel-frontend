@@ -8,7 +8,7 @@ export default function DestinationCard(){
 
     <div className="my-5 mx-4 w-full max-w-sm bg-white rounded-lg shadow-md">
         
-        <Image className="p-4 rounded-t-lg" src={cardImage}alt="product image" />
+        <Image className="p-4 rounded-t-lg" src={cardImage} alt="product image" />
         
         <div className="px-5 pb-5">
             <div className="flex justify-between items-center mt-2.5 mb-5">
