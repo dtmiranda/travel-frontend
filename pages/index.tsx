@@ -52,8 +52,7 @@ export default function Home() {
         <TrailCard/>
         <TrailCard/>
       </div>
-
-                   
+              
       <Footer />
       
     </>
