@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Category(){
   return(
-    <div className="my-4 flex justify-center flex-wrap">
+    <div className=" relative my-4 flex justify-center flex-wrap">
 
       <Link href='/' className="w-36 p-2 m-2 max-w-sm flex justify-center flex-col items-center bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 ">
         <div className='p-2 bg-red-50 rounded-full'>

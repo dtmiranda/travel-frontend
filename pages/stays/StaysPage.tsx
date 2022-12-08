@@ -1,6 +1,6 @@
 import PhotoCover from "./components/PhotoCover";
 
-export default function StaysPage(){
+export function StaysPage(){
   return(
     <>
       <PhotoCover/>     
