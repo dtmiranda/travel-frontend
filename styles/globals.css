@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+@layer base {
+  body {
+    @apply bg-[#faf7f7] ;
+  }
+
+  header {
+    @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
+  }
+
+  main{
+    @apply mx-auto max-w-screen-xl px-4 md:px-4
+  }
+}
+
+@layer components {
+  .headerLink {
+    @apply cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700;
+  }
+
+ 
+}

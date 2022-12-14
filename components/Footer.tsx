@@ -2,7 +2,7 @@
 
 export default function Footer(){
   return(
-    <footer className="bg-white border-gray-200 px-4 py-6 lg:px-8 dark:bg-gray-900">
+    <footer className="bg-white border-gray-200 px-4 py-6 mt-10 lg:px-8 dark:bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 md:px-4">
         <div className="md:flex md:justify-between ">
             <div className="mb-6 md:mb-0">
