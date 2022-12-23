@@ -16,9 +16,10 @@ export default function StaysPage(){
       <Header />
       
       <main>
-        <section>
-        <h5>Vila Morgana</h5>
-            <p>Calheta de São Miguel, Ponta Calhetona</p>
+        <section className="pt-4">
+
+        <h5 className="text-3xl font-semibold">Vila Morgana</h5>
+            <p className="text-gray-600">Calheta de São Miguel, Ponta Calhetona</p>
 
           <PhotoCover/>
 
@@ -27,7 +28,7 @@ export default function StaysPage(){
         <section className="mt-10 flex justify-between">
           <div className="w-3/5 mr-8 flex justify-start flex-col">
 
-            <h5>Description</h5>
+            <h5 className="text-xl pb-2 font-semibold">Description</h5>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta modi voluptatum voluptas fugiat est. Modi aliquam laudantium perferendis officia corporis, beatae laborum magnam voluptate. Iste ea exercitationem sapiente itaque molestiae.</p>
 
           </div>
@@ -75,7 +76,7 @@ export default function StaysPage(){
             </div>      
 
 
-            <a href="login" className="w-full text-white text-center bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2  focus:outline-none">Reservar</a>
+            <a href="login" className="w-full text-white text-center bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2  focus:outline-none">Reserv</a>
 
 
           </div>
