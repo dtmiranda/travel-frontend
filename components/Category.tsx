@@ -7,7 +7,7 @@ export default function Category(){
   return(
     <div className=" relative my-4 flex justify-center flex-wrap">
 
-      <Link href='/' className="w-36 p-2 m-2 max-w-sm flex justify-center flex-col items-center bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 ">
+      <Link href='/stays' className="w-36 p-2 m-2 max-w-sm flex justify-center flex-col items-center bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 ">
         <div className='p-2 bg-red-50 rounded-full'>
           <RiHotelLine size={25} color='#ff8066'/>
         </div>
@@ -15,7 +15,7 @@ export default function Category(){
       </Link>
       
 
-      <Link href="#" className="w-36 p-2 m-2 max-w-sm flex justify-center flex-col items-center bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 ">
+      <Link href="/restaurants" className="w-36 p-2 m-2 max-w-sm flex justify-center flex-col items-center bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 ">
         <div className='p-2 bg-green-50 rounded-full'>
           <RiRestaurant2Line size={25} color='#7dcea0'/>
         </div>

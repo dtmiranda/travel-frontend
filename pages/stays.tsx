@@ -81,6 +81,14 @@ export default function StaysPage(){
 
           </div>
         </section>
+
+        <section>
+          <div>
+            maps
+          </div>
+        </section>
+
+
       </main>
           
 
