@@ -15,7 +15,7 @@
   }
 
   main{
-    @apply mx-auto max-w-screen-xl px-4 md:px-4
+    @apply mx-auto max-w-screen-xl  px-4 md:px-4
   }
 
   input{
@@ -26,6 +26,10 @@
 @layer components {
   .headerLink {
     @apply cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700;
+  }
+
+  .categoryButton{
+    @apply h-32 p-2 m-2 w-40 flex justify-evenly items-center flex-col bg-white rounded-2xl border border-gray-200  hover:bg-gray-400
   }
 
  
