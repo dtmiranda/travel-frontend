@@ -1,10 +1,10 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Bunner from '../components/Bunner'
 import Category from '../components/Category'
 import DestinationCard from '../components/DestinationCard'
 import TrailCard from '../components/TrailCard'
 import Head from 'next/head'
+import Bunner from '../components/Bunner'
 
 export default function Home() {
   return (
@@ -17,32 +17,35 @@ export default function Home() {
       </Head>
 
       <Header />
+      <Bunner/>
 
 
-      <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16 ">
+      <main>
 
-        <Bunner/>
 
-        <section className="md:space-y-24">
+        <section className=" mt-52 md:mt-56">
           {/* <Category/> */}
           <Category/>
 
-          <div className=' pt-16 flex justify-center flex-col items-center'>
-            <h5 className="mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
-              Find the <mark className="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">destination</mark> you want
+            <h5 className="mt-16 mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
+              Popular Destination
             </h5>
-            <p className="text-gray-500 text-center sm:text-sm md:text-base lg:text-lg">We provite travel and vacation services with the best destinations.</p>
 
-          </div>
 
-          <div className='mb-5 flex justify-center flex-col, items-center  flex-wrap'>
-            <DestinationCard/>
-            <DestinationCard/>
-            <DestinationCard/>
-            <DestinationCard/>
-            <DestinationCard/>
-            <DestinationCard/>
-          </div>
+          <section className='flex justify-between flex-col, items-center flex-wrap'>
+            
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              
+
+          </section>
+
+          
 
           <div className='flex justify-center'>
             <button type="button" className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">See more</button>
