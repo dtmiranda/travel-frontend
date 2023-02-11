@@ -34,20 +34,30 @@ export default function Home() {
           {/* <Category/> */}
           <Category/>
 
-            <h5 className="text-transparent text-center bg-clip-text bg-gradient-to-r to-blue-700 from-gray-700 mt-16 mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
-              Popular Destination
+            
+
+
+          <section >
+            <h5 className="text-transparent text-center bg-clip-text mt-16 mb-3 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
+              Popular 
+              <span className='text-green-900'> Destination</span>
             </h5>
 
+            <p className="pb-4 text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
+              Visite memorible places 
+            </p>
 
-          <section className='flex justify-start flex-col, items-center flex-wrap'>
+            <div className='flex justify-start flex-col, items-center flex-wrap'>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+              <DestinationCard/>
+            </div>
             
-              <DestinationCard/>
-              <DestinationCard/>
-              <DestinationCard/>
-              <DestinationCard/>
-              <DestinationCard/>
-              <DestinationCard/>
-              <DestinationCard/>
+              
               
 
           </section>
@@ -55,16 +65,16 @@ export default function Home() {
 
           <section className=' py-8'>
             <div className=' flex justify-center flex-col items-center'>
-              <h5 className="text-transparent text-center bg-clip-text bg-gradient-to-r to-blue-700 from-gray-700 mt-16 mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
-                About Us
+              <h5 className="text-transparent text-center bg-clip-text mt-16 mb-3 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
+                <span className='text-green-900'>About </span> Us
               </h5>
-              <p className="text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
+              <p className="pb-6 text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
                 We planed beautiful destinations every weekend
               </p>
 
             </div>
 
-            <div className='py-4 flex justify-between flex-row items-center'>
+            <div className='pb-4 flex justify-between flex-row items-center'>
               <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg'>
                 <Image className='aboutImage' src={serra} alt={''}/>
               </div>
@@ -96,10 +106,22 @@ export default function Home() {
           </section>
 
 
-          <section className='flex '>
-            <CustomerSays/>
-            <CustomerSays/>
-            <CustomerSays/>
+          <section >
+            <h5 className="text-transparent text-center bg-clip-text mt-16 mb-4 text-xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
+              What Our 
+              <span className='text-green-900'> Costumers Say?</span> 
+            </h5>
+            <p className="text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
+              Custumers feedback is important to impruve aur services
+            </p>
+
+
+            <div className='flex justify-center items-center '>
+              <CustomerSays/>
+              <CustomerSays/>
+              <CustomerSays/>
+            </div>
+            
           </section>
 
 
