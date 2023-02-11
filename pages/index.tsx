@@ -10,6 +10,7 @@ import Bunner from '../components/Bunner'
 import aldeia from '../assets/images/aldeia.jpg'
 import piscina from '../assets/images/piscina.jpg'
 import serra from '../assets/images/serra.jpg'
+import CustomerSays from '../components/CustomerSays'
 
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
             </h5>
 
 
-          <section className='flex justify-between flex-col, items-center flex-wrap'>
+          <section className='flex justify-start flex-col, items-center flex-wrap'>
             
               <DestinationCard/>
               <DestinationCard/>
@@ -92,6 +93,13 @@ export default function Home() {
 
 
 
+          </section>
+
+
+          <section className='flex '>
+            <CustomerSays/>
+            <CustomerSays/>
+            <CustomerSays/>
           </section>
 
 
