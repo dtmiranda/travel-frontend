@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-[#faf7f7] ;
+    @apply bg-[#faf7f7] font-sans;
   }
 
   header {
@@ -15,7 +15,7 @@
   }
 
   main{
-    @apply mx-auto max-w-screen-xl  px-4 md:px-4
+    @apply mx-auto w-[90vw]  px-4 md:px-4
   }
 
   input{
@@ -29,7 +29,11 @@
   }
 
   .categoryButton{
-    @apply h-32 p-2 m-2 w-40 flex justify-evenly items-center flex-col bg-white rounded-2xl border border-gray-200  hover:bg-gray-400
+    @apply h-32 p-2 m-2 w-40 flex justify-evenly items-center flex-col bg-white rounded-2xl border border-gray-200  hover:bg-gray-100
+  }
+
+  .aboutImage{
+    @apply w-full
   }
 
  
