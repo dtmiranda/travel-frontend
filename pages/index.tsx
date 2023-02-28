@@ -11,6 +11,7 @@ import aldeia from '../assets/images/aldeia.jpg'
 import piscina from '../assets/images/piscina.jpg'
 import serra from '../assets/images/serra.jpg'
 import CustomerSays from '../components/CustomerSays'
+import Newsletter from '../components/Newsletter'
 
 
 export default function Home() {
@@ -141,10 +142,12 @@ export default function Home() {
 
         </section>
 
+        <Newsletter/>
+
         
       </main>
-      
-              
+
+    
       <Footer />
       
     </div>
