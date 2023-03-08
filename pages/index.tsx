@@ -14,6 +14,50 @@ import CustomerSays from '../components/CustomerSays'
 import Newsletter from '../components/Newsletter'
 
 
+const says = [
+  {
+    id:1,
+    username: "Bonnie Green",
+    user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    city: "California",
+    opion: "Interesting plataform to helps you find places in santiago north",
+
+  },
+  {
+    id:1,
+    username: "Bonnie Green",
+    user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    city: "California",
+    opion: "Interesting plataform to helps you find places in santiago north",
+
+  },
+  {
+    id:1,
+    username: "Bonnie Green",
+    user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    city: "California",
+    opion: "Interesting plataform to helps you find places in santiago north",
+
+  },
+  {
+    id:1,
+    username: "Bonnie Green",
+    user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    city: "California",
+    opion: "Interesting plataform to helps you find places in santiago north",
+
+  },
+  {
+    id:1,
+    username: "Bonnie Green",
+    user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    city: "California",
+    opion: "Interesting plataform to helps you find places in santiago north",
+
+  },
+]
+
+
 export default function Home() {
   return (
     <div >
@@ -107,6 +151,27 @@ export default function Home() {
           </section>
 
 
+          <section>
+            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+                <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-700">What Our <span className='text-green-900'> Costumers Say?</span></h2>
+                    <p className="font-light text-gray-500 lg:mb-16 sm:text-xl">Custumers feedback is important to impruve our services</p>
+                </div> 
+                <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    {says.map((say) => {
+                      return(
+                        <div key={say.id}>                 
+
+                          <CustomerSays {...say}/>
+                        </div>
+                      )
+                    })} 
+                     
+                </div>  
+            </div>
+          </section>
+
+
           <section >
             <h5 className="text-transparent text-center bg-clip-text mt-16 mb-4 text-xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
               What Our 
@@ -115,13 +180,6 @@ export default function Home() {
             <p className="text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
               Custumers feedback is important to impruve aur services
             </p>
-
-
-            <div className='flex justify-center items-center '>
-              <CustomerSays/>
-              <CustomerSays/>
-              <CustomerSays/>
-            </div>
             
           </section>
 
