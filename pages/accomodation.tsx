@@ -80,18 +80,18 @@ export default function Accomodations(){
       <Header />
 
       <section className="mt-8">
-      <div className="mx-auto max-w-2xl lg:text-center">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            The best <span className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">accomations</span> for you is here
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-          From a hotel in the city center to inns in the countryside, everything for you to have better experiences.
-          </p>
-        </div>
+      <div className="mx-auto text-center max-w-2xl lg:text-center">
+        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          The best <span className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">accomations</span> for you are here
+        </p>
+        <p className="mt-6 text-lg leading-8 text-gray-600">
+        From a hotel in the city center to inns in the countryside, everything for you to have better experiences.
+        </p>
+      </div>
       
       </section>
 
-      <section className="bg-white">
+      <section>
         <div className="mx-auto max-w-2xl pb-16 px-4 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
 
           <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">

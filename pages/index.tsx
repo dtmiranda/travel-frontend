@@ -131,12 +131,7 @@ export default function Home() {
           
           
 
-          <div className='flex justify-center flex-col, items-center flex-wrap'>
-            <TrailCard/>
-            <TrailCard/>
-            <TrailCard/>
-            <TrailCard/>
-          </div>
+          
 
           
 
