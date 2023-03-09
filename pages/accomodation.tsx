@@ -45,7 +45,7 @@ const products = [
     price: '$35',
     
   },{
-    id: 4,
+    id: 5,
     name: 'Hotel Edu Horizonte',
     coordinate: "5345345345534",
     star_range: "4.95",
@@ -54,7 +54,7 @@ const products = [
     price: '$35',
     
   },{
-    id: 4,
+    id: 6,
     name: 'Hotel Edu Horizonte',
     coordinate: "5345345345534",
     star_range: "4.95",
@@ -117,38 +117,4 @@ export default function Accomodations(){
     
   )
 
-  
- /*  return(
-    <>
-     
-
-      <main>
-        <section className="my-4">
-          <h3 className="text-3xl font-bold text-center">Accomodations</h3>
-          <p className="mb-2 text-center md:text-xl">Here's the best places you can rest </p>
-
-        </section>
-
-        <section>
-          
-            <div>
-              <AccomodationCard/>
-              <AccomodationCard/>
-              <AccomodationCard/>
-              <AccomodationCard/>
-              <AccomodationCard/>
-            </div>
-          
-        </section>
-
-          
-      </main>
-
-      
-
-    
-    </>
-  ) */
 }
-
-

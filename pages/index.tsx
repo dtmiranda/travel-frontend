@@ -131,7 +131,7 @@ export default function Home() {
             </div>
 
             <div>
-            <p className="text-gray-500 text-center text-xs sm:text-sm md:text-lg lg:text-xl">
+            <p className="font-light text-center text-gray-500 lg:mb-16 sm:text-xl">
                 Arranging a healthy and beautiful vacations is our main gol. We <br/>
                 consider our seccess to be able to offer our users the right <br/>
                 journey and a enjoyable holiday
@@ -177,22 +177,11 @@ export default function Home() {
             
           </section> */}
 
-
-          
-
-          
-          
-
-          
-
-          
-
         </section>
-
-        <Newsletter/>
 
         
       </main>
+      <Newsletter/>
 
     
       <Footer />
