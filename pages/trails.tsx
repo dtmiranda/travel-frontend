@@ -99,7 +99,7 @@ export default function Trails(){
       <section className="mt-8">
       <div className="mx-auto text-center max-w-2xl lg:text-center">
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Come and <span className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">discover</span> our incredible 
+          Incredible 
           <span className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl"> trails</span>
         </p>
         <p className="mt-6 text-lg leading-8 text-gray-600">
