@@ -20,16 +20,19 @@ export default function AccomodationCard(props: {
 
     <>
         <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-            <img
-            src={props.thumbnails_hotels}
-            ///«alt={props.imageAlt}
-            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-            />
+            <a href="/accomodation_details">
+               <img
+                src={props.thumbnails_hotels}
+                ///«alt={props.imageAlt}
+                className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            /> 
+            </a>
+            
         </div>
         <div className="mt-4 flex justify-between items-start">
             <div>
                 <h3 className="text-sm text-gray-700">
-                    <a href="">
+                    <a href="/accomodation_details">
                     <span aria-hidden="true" className="absolute inset-0" />
                     {props.name}
                     </a>
