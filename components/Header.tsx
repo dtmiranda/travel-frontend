@@ -3,7 +3,7 @@ export default function Header(){
   return(
     <nav className="bg-transparent border-gray-200 py-6">
       <div className="container flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-4">
-      <a href="home" className="flex items-center">
+      <a href="/" className="flex items-center">
         <span className="self-center text-xl font-semibold whitespace-nowrap text-gray-900">TravelNorth</span>
       </a>
       <div className="flex items-center md:order-2">
@@ -17,7 +17,7 @@ export default function Header(){
         <ul className="flex flex-col p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
           
           <li>
-            <a href="/index" className="headerLink">Home</a>
+            <a href="/" className="headerLink">Home</a>
           </li>
 
           <li>

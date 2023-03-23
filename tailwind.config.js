@@ -8,6 +8,7 @@
     "./public/**/*.html",
   ],
   plugins: [
+    require('@tailwindcss/forms'),
     require('tailwind-scrollbar-hide'),
     require('tailwind-scrollbar'),
     require('@tailwindcss/line-clamp'),
