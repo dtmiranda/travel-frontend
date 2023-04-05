@@ -247,7 +247,7 @@ export default function Signup() {
               <div className="h-96 overflow-hidden shadow  sm:rounded-md">
                 <div className="bg-gray-50 px-4 py-3 text-left border-b border-gray-100 sm:px-6">
                   <a
-                    href="/AddProperty"
+                    href="/AddHotel"
                     className="inline-flex justify-center items-center rounded-md bg-green-800 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                   >
                     <MdAddCircle size={20} className="mr-1" />
