@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 export default function Signup() {
 
-  const[isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleOpenModal = () => {
     console.log('Opening modal')
@@ -16,7 +16,7 @@ export default function Signup() {
 
   }
 
-  
+
 
 
   return (
@@ -28,7 +28,7 @@ export default function Signup() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header/>
+      <Header />
 
 
 
@@ -49,7 +49,6 @@ export default function Signup() {
                 <div className="shadow sm:overflow-hidden sm:rounded-md">
                   <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
 
-
                     <div>
                       <label className="block text-sm font-medium leading-6 text-gray-900">Photo</label>
                       <div className="mt-2 flex items-center">
@@ -58,6 +57,8 @@ export default function Signup() {
                             <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                           </svg>
                         </span>
+
+
                         <button
                           type="button"
                           className="ml-5 rounded-md border border-gray-300 bg-white py-1.5 px-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50"
@@ -66,6 +67,68 @@ export default function Signup() {
                         </button>
                       </div>
                     </div>
+
+                    <div className="mt-5 md:col-span-2 md:mt-0">
+                      <div className="bg-white px-4 py-5 sm:p-6">
+                        <div className="grid grid-cols-6 gap-6">
+                          <div className="col-span-6 sm:col-span-3">
+                            <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
+                              Username
+                            </label>
+                            <input
+                              type="text"
+                              name="user-name"
+                              id="user-name"
+                              autoComplete="given-name"
+                              className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
+                            />
+                          </div>
+
+                          <div className="col-span-6 sm:col-span-3">
+                            <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
+                              Email
+                            </label>
+                            <input
+                              type="email"
+                              name="email"
+                              id="email"
+                              autoComplete="email-name"
+                              className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
+                            />
+                          </div>
+
+                          <div className="col-span-6 sm:col-span-3">
+                            <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              name="password"
+                              id="password"
+                              autoComplete="password"
+                              className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
+                            />
+                          </div>
+
+                          <div className="col-span-6 sm:col-span-3">
+                            <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
+                              Confirm Password
+                            </label>
+                            <input
+                              type="password"
+                              name="c-password"
+                              id="c-password"
+                              autoComplete="password"
+                              className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
+                            />
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+
 
                   </div>
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
@@ -129,18 +192,6 @@ export default function Signup() {
                         />
                       </div>
 
-                      <div className="col-span-6 sm:col-span-4">
-                        <label htmlFor="email-address" className="block text-sm font-medium leading-6 text-gray-900">
-                          Email address
-                        </label>
-                        <input
-                          type="text"
-                          name="email-address"
-                          id="email-address"
-                          autoComplete="email"
-                          className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
-                        />
-                      </div>
 
                       <div className="col-span-6 sm:col-span-3">
                         <label htmlFor="country" className="block text-sm font-medium leading-6 text-gray-900">
@@ -159,57 +210,7 @@ export default function Signup() {
                         </select>
                       </div>
 
-                      <div className="col-span-6">
-                        <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
-                          Street address
-                        </label>
-                        <input
-                          type="text"
-                          name="street-address"
-                          id="street-address"
-                          autoComplete="street-address"
-                          className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
-                        />
-                      </div>
 
-                      <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                        <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
-                          City
-                        </label>
-                        <input
-                          type="text"
-                          name="city"
-                          id="city"
-                          autoComplete="address-level2"
-                          className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
-                        />
-                      </div>
-
-                      <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                        <label htmlFor="region" className="block text-sm font-medium leading-6 text-gray-900">
-                          State / Province
-                        </label>
-                        <input
-                          type="text"
-                          name="region"
-                          id="region"
-                          autoComplete="address-level1"
-                          className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
-                        />
-                      </div>
-
-                      <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                        <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900">
-                          ZIP / Postal code
-                        </label>
-                        <input
-                          type="text"
-                          name="postal-code"
-                          id="postal-code"
-                          autoComplete="postal-code"
-                          className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6"
-                        />
-                      </div>
                     </div>
                   </div>
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
@@ -245,11 +246,11 @@ export default function Signup() {
             <div className="mt-5 md:col-span-2 md:mt-0">
               <div className="h-96 overflow-hidden shadow  sm:rounded-md">
                 <div className="bg-gray-50 px-4 py-3 text-left border-b border-gray-100 sm:px-6">
-                  <a 
-                    href="/AddProperty" 
+                  <a
+                    href="/AddProperty"
                     className="inline-flex justify-center items-center rounded-md bg-green-800 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                   >
-                    <MdAddCircle size={20} className="mr-1"/>
+                    <MdAddCircle size={20} className="mr-1" />
                     Add property
                   </a>
                   {/* <button
@@ -269,11 +270,11 @@ export default function Signup() {
           </div>
         </div>
 
-        
+
 
       </main>
 
-      <Footer/>
+      <Footer />
 
     </>
   )
