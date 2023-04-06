@@ -1,9 +1,10 @@
 import Header from "../components/Header";
 import Head from "next/head"
-import { MdAdd, MdAddCircle } from "react-icons/md";
+import { MdAdd, MdAddCircle, MdRestaurant } from "react-icons/md";
 import AddCompany from "../components/DeleteProperty";
 import { useState } from "react";
 import Footer from "../components/Footer";
+import { FaHotel } from "react-icons/fa";
 
 
 export default function Signup() {
@@ -247,11 +248,19 @@ export default function Signup() {
               <div className="h-96 overflow-hidden shadow  sm:rounded-md">
                 <div className="bg-gray-50 px-4 py-3 text-left border-b border-gray-100 sm:px-6">
                   <a
-                    href="/AddHotel"
-                    className="inline-flex justify-center items-center rounded-md bg-green-800 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
+                    href="/AddRestaurant"
+                    className="inline-flex justify-center items-center rounded-md  py-2 px-3 text-sm font-semibold border border-green-800 text-green-800 shadow-sm hover:bg-green-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                   >
-                    <MdAddCircle size={20} className="mr-1" />
-                    Add property
+                    <MdRestaurant size={20} className="mr-1" />
+                    Add Restaurant
+                  </a>
+
+                  <a
+                    href="/AddHotel"
+                    className="inline-flex justify-center items-center rounded-md  py-2 px-3 text-sm font-semibold border border-green-800 text-green-800 shadow-sm hover:bg-green-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
+                  >
+                    <FaHotel size={20} className="mr-1" />
+                    Add Hotel
                   </a>
                   {/* <button
                     onClick={handleOpenModal}
