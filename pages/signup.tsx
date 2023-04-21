@@ -248,7 +248,7 @@ export default function Signup() {
               <div className="h-96 overflow-hidden shadow  sm:rounded-md">
                 <div className="bg-gray-50 px-4 py-3 text-left border-b border-gray-100 sm:px-6">
                   <a
-                    href="/AddRestaurant"
+                    href="/add_restaurant"
                     className="inline-flex justify-center items-center rounded-md  py-2 px-3 text-sm font-semibold border border-green-800 text-green-800 shadow-sm hover:bg-green-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                   >
                     <MdRestaurant size={20} className="mr-1" />
