@@ -1,11 +1,34 @@
-import Header from "../components/Header";
 import Head from "next/head"
 import { FcGoogle } from "react-icons/fc";
-
 import { FaFacebookF } from "react-icons/fa";
-
+import React, { useCallback, useState } from "react";
+import { useRouter } from 'next/router'
+import api from "../providers/Api";
 
 export default function Signup() {
+  const router = useRouter();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = useCallback(
+    async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+
+      try {
+        const response = await api.post('users', {
+          email,
+          password,
+        })
+
+        console.log(response.data)
+        await router.replace("/login")
+
+      } catch (error) {
+        
+        alert(error)
+      }
+    }, [email, password])
 
   return (
     <>
@@ -50,13 +73,13 @@ export default function Signup() {
 
           <div>
             <div className="inline-flex items-center justify-center w-full">
-              <hr className="w-64 h-px my-8 bg-gray-200 border-0"/>
-                <span className="absolute px-3 font-normal text-gray-300 -translate-x-1/2 bg-[#faf7f7]  left-1/2">or</span>
+              <hr className="w-64 h-px my-8 bg-gray-200 border-0" />
+              <span className="absolute px-3 font-normal text-gray-300 -translate-x-1/2 bg-[#faf7f7]  left-1/2">or</span>
             </div>
           </div>
 
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+            <form onSubmit={handleSubmit} className="space-y-6" action="login">
               <div>
 
                 <div className="mt-2">
@@ -67,6 +90,8 @@ export default function Signup() {
                     autoComplete="email"
                     placeholder="Email address"
                     required
+                    value={email}
+                    onChange={(event) => setEmail(event.currentTarget?.value || "")}
                   />
                 </div>
               </div>
@@ -81,6 +106,8 @@ export default function Signup() {
                     autoComplete="current-password"
                     placeholder="Password"
                     required
+                    value={password}
+                    onChange={(event) => setPassword(event.currentTarget?.value || "")}
                   />
                 </div>
               </div>
@@ -117,7 +144,6 @@ export default function Signup() {
         </div>
 
       </main>
-
 
     </>
   )
