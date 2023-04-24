@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Map from "../components/Index";
 import { useCallback, useState } from "react";
-import { Api } from "../providers/Api";
+import api from "../providers/Api";
 
 
 
@@ -33,9 +33,10 @@ export default function AddRestaurant() {
       event.preventDefault();
 
 
+
       try {
 
-        const response = await Api.post("restaurants", {
+        const response = await api.post("restaurants", {
 
           name,
           description,
@@ -55,8 +56,6 @@ export default function AddRestaurant() {
 
       } catch (error) {
         console.error(error)
-        console.log("post")
-
 
       }
 

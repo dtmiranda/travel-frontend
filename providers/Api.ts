@@ -1,6 +1,19 @@
-import axios from 'axios';
-
-const baseURL = process.env.REACT_APP_BASE_URL
+import axios, { AxiosInstance } from 'axios';
 
 
-export const Api = axios.create({ baseURL })
+const api: AxiosInstance = axios.create({
+  
+  baseURL: process.env.API_BASE_URL,
+  headers:{
+    Authorization: '',
+    'Content-type': 'application/json',
+
+  }
+
+
+})
+
+console.log(process.env.API_BASE_URL)
+
+
+export default api;
