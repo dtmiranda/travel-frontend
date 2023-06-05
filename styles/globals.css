@@ -15,7 +15,7 @@
   }
 
   main{
-    @apply my-8 mx-auto px-4 md:w-[90vw]   md:px-4
+    @apply mt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 
   }
 
   input{
