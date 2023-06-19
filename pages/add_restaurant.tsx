@@ -4,15 +4,17 @@ import { TbBeach, TbParking, TbPool, TbSnowflake, TbWifi } from "react-icons/tb"
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Map from "../components/Index";
-import { useCallback, useState } from "react";
+import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import api from "../providers/Api";
 
-
-
+import { Island } from "../utils/typings";
 
 
 
 export default function AddRestaurant() {
+
+  const [islands, setIslands] = useState<Island[]>([]);
+
 
 
   const [name, setName] = useState("");
@@ -21,12 +23,37 @@ export default function AddRestaurant() {
   const [whatsapp, setWhatsapp] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
-  const [amenities, setAmenities] = useState("");
-  const [coordinate, setCoordinate] = useState("");
-  const [cuisine, setCuisine] = useState("");
+  const [amenities, setAmenities] = useState("wifi");
+  const [coordinate, setCoordinate] = useState("14.8583029,-23.3627246");
+  const [cuisine, setCuisine] = useState("Traditional");
+  const [selectIsland, setSelectIsland] = useState('0')
 
 
+  const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZDIxOGIwYS05NmM1LTQ0MGMtOTZjMS0wNDM3ZmNkNjA0YzUiLCJlbWFpbCI6ImNhcmxvc0BtYWlsLmNvbSIsImlhdCI6MTY4NzE3NzUzNCwiZXhwIjoxNjg3MjYzOTM0fQ.5PND-QHdd2ynpvoGEhRE3MiBHHr5ZYTwGoBEWySGdDM"
 
+
+  useEffect(() => {
+    const fetchIslands = async () => {
+      try {
+        const response = await api.get<Island[]>('/islands');
+        console.log(response.data)
+        setIslands(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchIslands();
+  }, []);
+
+  function handleSelectIsland( event: ChangeEvent<HTMLSelectElement>){
+    const island = event.target.value;
+
+    setSelectIsland(island);
+  }
+
+
+ 
 
   const handleSubmit = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
@@ -47,11 +74,17 @@ export default function AddRestaurant() {
           amenities,
           coordinate,
           cuisine,
+          cityId : selectIsland,
+          
 
+        }, {
+          headers: {
+            'Authorization': `Bearer ${accessToken}`,
+          }
         })
 
 
-        console.log(response.data)
+        console.log("Restaurant data: ", response.data)
 
 
       } catch (error) {
@@ -129,21 +162,21 @@ export default function AddRestaurant() {
 
                 <div>
                   <label htmlFor="island" className="block mb-2 text-sm font-medium text-gray-900">Island</label>
-                  <select id="island" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full py-2.5">
+                  <select
+                    name="island"
+                    id="island"
+                    value={selectIsland}
+                    onChange={handleSelectIsland}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full py-2.5">
 
                     <option selected></option>
-                    <option value="Santo Antão">Santo Antão</option>
-                    <option value="São Vicente">São Vicente</option>
-                    <option value="Santa Luzia">Santa Luzia</option>
-                    <option value="São Nicolau">São Nicolau</option>
-                    <option value="Sal">Sal</option>
-                    <option value="Boavista">Boavista</option>
-                    <option value="Maio">Maio</option>
-                    <option value="Santiago">Santiago</option>
-                    <option value="Fogo">Fogo</option>
-                    <option value="Brava">Brava</option>
 
+                    {islands.map((island) => (
+                      <option key={island.id} value={island.id.toString()}>{island.name}</option>
+                    ))}
                   </select>
+
+
                 </div>
 
 
