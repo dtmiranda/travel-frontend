@@ -7,3 +7,8 @@ export interface Stays{
   city: string,
 
 }
+
+export interface Island{
+  id: string;
+  name: string;
+}
