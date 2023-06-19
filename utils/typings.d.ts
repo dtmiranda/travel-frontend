@@ -12,3 +12,9 @@ export interface Island{
   id: string;
   name: string;
 }
+
+export interface City{
+  id: string;
+  name: string;
+  islandId: string;
+}
