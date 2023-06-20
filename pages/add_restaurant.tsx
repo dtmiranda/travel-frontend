@@ -7,13 +7,15 @@ import Map from "../components/Index";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import api from "../providers/Api";
 
-import { Island } from "../utils/typings";
+import { City, Island } from "../utils/typings";
 
 
 
 export default function AddRestaurant() {
 
   const [islands, setIslands] = useState<Island[]>([]);
+  const [cities, setCities] = useState<City[]>([]);
+  
 
 
 
@@ -23,21 +25,25 @@ export default function AddRestaurant() {
   const [whatsapp, setWhatsapp] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
-  const [amenities, setAmenities] = useState("wifi");
+  const [amenities, setAmenities] = useState<string[]>([]);
   const [coordinate, setCoordinate] = useState("14.8583029,-23.3627246");
   const [cuisine, setCuisine] = useState("Traditional");
+
   const [selectIsland, setSelectIsland] = useState('0')
+  const [selectCity, setSelectCity] = useState('0')
+  const [selectAmenities, setSelectAmenities] = useState<number[]>([])
 
 
-  const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZDIxOGIwYS05NmM1LTQ0MGMtOTZjMS0wNDM3ZmNkNjA0YzUiLCJlbWFpbCI6ImNhcmxvc0BtYWlsLmNvbSIsImlhdCI6MTY4NzE3NzUzNCwiZXhwIjoxNjg3MjYzOTM0fQ.5PND-QHdd2ynpvoGEhRE3MiBHHr5ZYTwGoBEWySGdDM"
+  const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZDIxOGIwYS05NmM1LTQ0MGMtOTZjMS0wNDM3ZmNkNjA0YzUiLCJlbWFpbCI6ImNhcmxvc0BtYWlsLmNvbSIsImlhdCI6MTY4NzI3MDQyMiwiZXhwIjoxNjg3MzU2ODIyfQ.I_rCZ3Iupyh0kUlst6ageohAPkzbuxJ8wzk_kGaoj2A"
 
 
   useEffect(() => {
     const fetchIslands = async () => {
       try {
+
         const response = await api.get<Island[]>('/islands');
-        console.log(response.data)
         setIslands(response.data);
+
       } catch (error) {
         console.error(error);
       }
@@ -53,7 +59,35 @@ export default function AddRestaurant() {
   }
 
 
- 
+  useEffect(() => {
+    if(selectIsland == '0'){
+
+      return
+
+    }
+
+    const fetchCity = async () => {
+      try {
+
+        const response = await api.get<City[]>(`/cities/i/${selectIsland}`)
+        setCities(response.data)
+
+      } catch (error) {
+        console.error(error)
+      }
+    };
+
+    fetchCity();
+  })
+
+  function handleSelectCity( event : ChangeEvent<HTMLSelectElement>){
+    const city = event.target.value;
+
+    setSelectCity(city)
+  }
+
+
+
 
   const handleSubmit = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
@@ -74,7 +108,7 @@ export default function AddRestaurant() {
           amenities,
           coordinate,
           cuisine,
-          cityId : selectIsland,
+          cityId : selectCity,
           
 
         }, {
@@ -182,31 +216,21 @@ export default function AddRestaurant() {
 
                 <div>
                   <label htmlFor="city" className="block mb-2 text-sm font-medium text-gray-900">City</label>
-                  <select id="city" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full py-2.5">
+
+                  <select
+                    name="city"
+                    id="city"
+                    value={selectCity}
+                    onChange={handleSelectCity}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full py-2.5">
 
                     <option selected></option>
-                    <option value="Assomada">Assomada</option>
-                    <option value="João Teves">João Teves</option>
-                    <option value="Mindelo">Mindelo</option>
-                    <option value="Mosteiros">Mosteiros</option>
-                    <option value="Nova Sintra">Nova Sintra</option>
-                    <option value="Pedra Badejo">Pedra Badejo</option>
-                    <option value="Picos">Picos</option>
-                    <option value="Porto Novo">Porto Novo</option>
-                    <option value="Praia">Praia</option>
-                    <option value="Ribeira Brava">Ribeira Brava</option>
-                    <option value="Ribeira Grande">Ribeira Grande</option>
-                    <option value="Sal Rei">Sal Rei</option>
-                    <option value="Santa Catarina do Fogo">Santa Catarina do Fogo</option>
-                    <option value="Santa Maria">Santa Maria</option>
-                    <option value="São Domingos">São Domingos</option>
-                    <option value="São Filipe">São Filipe</option>
-                    <option value="São Miguel">São Miguel</option>
-                    <option value="Tarrafal">Tarrafal</option>
-                    <option value="Tarrafal do São Nicolau">Tarrafal do São Nicolau</option>
-                    <option value="Porto Inglés">Porto Inglés</option>
 
+                    {cities.map((city) => (
+                      <option key={city.id} value={city.id.toString()}>{city.name}</option>
+                    ))}
                   </select>
+                  
                 </div>
 
                 <div>
