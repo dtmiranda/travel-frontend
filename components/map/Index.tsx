@@ -6,10 +6,8 @@ import dynamic from "next/dynamic"
  * And with this we solve "Windows is not defeine" error
  */
 
-const Map = dynamic(() => import('./Map'),{
-  ssr: false
-})
+const LeafletMap = dynamic(() => import('./Map'), { ssr: false })
 
 
 
-export default Map
+export default LeafletMap
