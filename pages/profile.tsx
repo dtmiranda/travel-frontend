@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import { FaUserCircle, FaHotel, } from 'react-icons/fa'
 import { MdFestival, MdRestaurant } from 'react-icons/md'
-import Header from '../src/components/Header'
+import Header from '../src/components/NavBar'
 import Footer from '../src/components/Footer'
 
 

@@ -1,6 +1,6 @@
 
 import Head from "next/head"
-import Header from "../src/components/Header"
+import Header from "../src/components/NavBar"
 import Footer from "../src/components/Footer"
 import EventCard from "../src/components/EventCard"
 import { BiCalendarCheck } from "react-icons/bi"

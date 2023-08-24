@@ -2,7 +2,7 @@ import Head from "next/head";
 import { MdAddCircle, MdBedroomParent, MdCancel, MdComputer, MdDeleteForever, MdSave } from "react-icons/md";
 import { TbBeach, TbParking, TbPool, TbSnowflake, TbWifi } from "react-icons/tb";
 import Footer from "../src/components/Footer";
-import Header from "../src/components/Header";
+import Header from "../src/components/NavBar";
 import Map from "../src/components/Index";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import api from "../providers/Api";

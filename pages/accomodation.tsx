@@ -1,6 +1,6 @@
 
 import Head from "next/head"
-import Header from "../src/components/Header"
+import Header from "../src/components/NavBar"
 import AccomodationCard from "../src/components/AccomodationCard"
 import { CiSearch } from "react-icons/ci"
 import Footer from "../src/components/Footer"

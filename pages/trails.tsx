@@ -1,6 +1,6 @@
 
 import Head from "next/head"
-import Header from "../src/components/Header"
+import Header from "../src/components/NavBar"
 import Footer from "../src/components/Footer"
 import TrailCard from "../src/components/TrailCard"
 

@@ -1,15 +1,16 @@
 import Image from 'next/image'
-import Header from '../src/components/Header'
-import Footer from '../src/components/Footer'
+
+import { Navbar, Hero, Footer } from '../src/components'
+import Header from '../src/components/NavBar'
 import Category from '../src/components/Category'
 import DestinationCard from '../src/components/DestinationCard'
 import TrailCard from '../src/components/TrailCard'
 import Head from 'next/head'
 import Bunner from '../src/components/Hero'
-
+/* 
 import aldeia from '../assets/images/aldeia.jpg'
 import piscina from '../assets/images/piscina.jpg'
-import serra from '../assets/images/serra.jpg'
+import serra from '../assets/images/serra.jpg' */
 import CustomerSays from '../src/components/CustomerSays'
 import Newsletter from '../src/components/Newsletter'
 
@@ -56,13 +57,14 @@ export default function Home() {
     <div >
       <Head>
         <title>
-          TravelNorth
+          Travel
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <Bunner />
+      <Navbar />
+      <Hero />
+      
 
 
       <main>
@@ -70,7 +72,7 @@ export default function Home() {
 
         <section className=" mt-52 md:mt-56">
           {/* <Category/> */}
-          <Category />
+          {/* <Category /> */}
 
 
 
@@ -112,7 +114,7 @@ export default function Home() {
 
             </div>
 
-            <div className='pb-4 flex justify-between flex-row items-center'>
+            {/* <div className='pb-4 flex justify-between flex-row items-center'>
               <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg'>
                 <Image className='aboutImage' src={serra} alt={''} />
               </div>
@@ -128,7 +130,7 @@ export default function Home() {
               </div>
 
 
-            </div>
+            </div> */}
 
             <div>
               <p className="font-light text-center text-gray-500 lg:mb-16 sm:text-xl">

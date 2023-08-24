@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Footer from "../src/components/Footer";
-import Header from "../src/components/Header";
+import Header from "../src/components/NavBar";
 import Map from "../src/components/Index";
 import { FaStar } from "react-icons/fa"
 
