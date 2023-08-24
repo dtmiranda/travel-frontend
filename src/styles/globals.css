@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Manrope", sans-serif;
+}
+
+/* START:General styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+
+body {
+  @apply bg-[#faf7f7] font-sans;
+}
+
+header {
+  @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
+}
+
+main {
+  @apply mt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8
+}
+
+input {
+  @apply pl-2 bg-inherit h-8 w-full rounded-lg focus:border-none text-gray-600 focus:outline-none
+}
+
+
+
+.headerLink {
+  @apply cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-green-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0;
+}
+
+.categoryButton {
+  @apply h-32 p-2 m-2 w-40 flex justify-evenly items-center flex-col bg-white rounded-2xl border border-gray-200 hover:bg-gray-100
+}
+
+.aboutImage {
+  @apply w-full
+}
