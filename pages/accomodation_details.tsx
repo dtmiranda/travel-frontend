@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Map from "../components/Index";
+import Footer from "../src/components/Footer";
+import Header from "../src/components/Header";
+import Map from "../src/components/Index";
 import { FaStar } from "react-icons/fa"
 
 
@@ -203,7 +203,7 @@ export default function HotelDetails() {
                 </div>
 
                 <div className="mt-10">
-                  
+
                   <Map />
                 </div>
 

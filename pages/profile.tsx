@@ -1,9 +1,9 @@
 
 import Head from 'next/head'
 import { FaUserCircle, FaHotel, } from 'react-icons/fa'
-import {MdFestival, MdRestaurant} from 'react-icons/md'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { MdFestival, MdRestaurant } from 'react-icons/md'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 
 
 
@@ -182,17 +182,17 @@ export default function Profile() {
               <div className="mt-10 space-y-10">
                 <fieldset>
                   <a href='/AddHotel' type="button" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                    <FaHotel size={16} className='mr-2'/> 
+                    <FaHotel size={16} className='mr-2' />
                     Add Hotel
                   </a>
 
                   <a href='/add_restaurant' type="button" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                    <MdRestaurant size={16} className='mr-2'/>
+                    <MdRestaurant size={16} className='mr-2' />
                     Add Restaurant
                   </a>
 
                   <a href='/add_events' type="button" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                    <MdFestival size={16} className='mr-2'/>
+                    <MdFestival size={16} className='mr-2' />
                     Add Events
                   </a>
 

@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { MdAddCircle, MdBedroomParent, MdCancel, MdComputer, MdDeleteForever, MdSave } from "react-icons/md";
 import { TbBeach, TbParking, TbPool, TbSnowflake, TbWifi } from "react-icons/tb";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Map from "../components/Index";
+import Footer from "../src/components/Footer";
+import Header from "../src/components/Header";
+import Map from "../src/components/Index";
 
 
 

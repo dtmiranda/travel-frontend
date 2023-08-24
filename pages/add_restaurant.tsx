@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { MdAddCircle, MdBedroomParent, MdCancel, MdComputer, MdDeleteForever, MdSave } from "react-icons/md";
 import { TbBeach, TbParking, TbPool, TbSnowflake, TbWifi } from "react-icons/tb";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Map from "../components/Index";
+import Footer from "../src/components/Footer";
+import Header from "../src/components/Header";
+import Map from "../src/components/Index";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import api from "../providers/Api";
 
@@ -15,7 +15,7 @@ export default function AddRestaurant() {
 
   const [islands, setIslands] = useState<Island[]>([]);
   const [cities, setCities] = useState<City[]>([]);
-  
+
 
 
 
@@ -52,7 +52,7 @@ export default function AddRestaurant() {
     fetchIslands();
   }, []);
 
-  function handleSelectIsland( event: ChangeEvent<HTMLSelectElement>){
+  function handleSelectIsland(event: ChangeEvent<HTMLSelectElement>) {
     const island = event.target.value;
 
     setSelectIsland(island);
@@ -60,7 +60,7 @@ export default function AddRestaurant() {
 
 
   useEffect(() => {
-    if(selectIsland == '0'){
+    if (selectIsland == '0') {
 
       return
 
@@ -80,7 +80,7 @@ export default function AddRestaurant() {
     fetchCity();
   })
 
-  function handleSelectCity( event : ChangeEvent<HTMLSelectElement>){
+  function handleSelectCity(event: ChangeEvent<HTMLSelectElement>) {
     const city = event.target.value;
 
     setSelectCity(city)
@@ -108,8 +108,8 @@ export default function AddRestaurant() {
           amenities,
           coordinate,
           cuisine,
-          cityId : selectCity,
-          
+          cityId: selectCity,
+
 
         }, {
           headers: {
@@ -230,7 +230,7 @@ export default function AddRestaurant() {
                       <option key={city.id} value={city.id.toString()}>{city.name}</option>
                     ))}
                   </select>
-                  
+
                 </div>
 
                 <div>

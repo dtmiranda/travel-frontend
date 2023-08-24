@@ -1,8 +1,8 @@
 
 import Head from "next/head"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import TrailCard from "../components/TrailCard"
+import Header from "../src/components/Header"
+import Footer from "../src/components/Footer"
+import TrailCard from "../src/components/TrailCard"
 
 const trails = [
 
@@ -18,8 +18,8 @@ const trails = [
     duration: "45",
     star_range: "4.95",
     city: "Calheta",
-    
-  },{
+
+  }, {
     id: 2,
     name: 'Trilha de Serra Malagueta',
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dignissimos quos sint excepturi blanditiis labore dolore. Eligendi deserunt nulla dignissimos facilis quos. Impedit, excepturi est cum sit iusto quisquam.",
@@ -30,8 +30,8 @@ const trails = [
     duration: "45",
     star_range: "4.95",
     city: "Calheta",
-    
-  },{
+
+  }, {
     id: 3,
     name: 'Trilha de Serra Malagueta',
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dignissimos quos sint excepturi blanditiis labore dolore. Eligendi deserunt nulla dignissimos facilis quos. Impedit, excepturi est cum sit iusto quisquam.",
@@ -42,8 +42,8 @@ const trails = [
     duration: "45",
     star_range: "4.95",
     city: "Calheta",
-    
-  },{
+
+  }, {
     id: 4,
     name: 'Trilha de Serra Malagueta',
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dignissimos quos sint excepturi blanditiis labore dolore. Eligendi deserunt nulla dignissimos facilis quos. Impedit, excepturi est cum sit iusto quisquam.",
@@ -54,8 +54,8 @@ const trails = [
     duration: "45",
     star_range: "4.95",
     city: "Calheta",
-    
-  },{
+
+  }, {
     id: 5,
     name: 'Trilha de Serra Malagueta',
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dignissimos quos sint excepturi blanditiis labore dolore. Eligendi deserunt nulla dignissimos facilis quos. Impedit, excepturi est cum sit iusto quisquam.",
@@ -66,8 +66,8 @@ const trails = [
     duration: "45",
     star_range: "4.95",
     city: "Calheta",
-    
-  },{
+
+  }, {
     id: 6,
     name: 'Trilha de Serra Malagueta',
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis dignissimos quos sint excepturi blanditiis labore dolore. Eligendi deserunt nulla dignissimos facilis quos. Impedit, excepturi est cum sit iusto quisquam.",
@@ -78,16 +78,16 @@ const trails = [
     duration: "45",
     star_range: "4.95",
     city: "Calheta",
-    
-  },
-  
-  // More products...
-  ]
 
-export default function Trails(){
+  },
+
+  // More products...
+]
+
+export default function Trails() {
   return (
     <>
-       <Head>
+      <Head>
         <title>
           TravelNorth
         </title>
@@ -97,16 +97,16 @@ export default function Trails(){
       <Header />
 
       <section className="mt-8">
-      <div className="mx-auto text-center max-w-2xl lg:text-center">
-        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Incredible 
-          <span className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl"> trails</span>
-        </p>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          There is so many incredible trails in the north that you can explore with us.
-        </p>
-      </div>
-      
+        <div className="mx-auto text-center max-w-2xl lg:text-center">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Incredible
+            <span className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl"> trails</span>
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            There is so many incredible trails in the north that you can explore with us.
+          </p>
+        </div>
+
       </section>
 
       <section>
@@ -114,25 +114,25 @@ export default function Trails(){
 
           <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {trails.map((trail) => {
-              return(
+              return (
                 <div key={trail.id} className="group relative">
 
-                  <TrailCard {...trail}/>
+                  <TrailCard {...trail} />
 
                 </div>
               )
-            }  
+            }
             )}
-            
+
           </div>
         </div>
       </section>
 
 
-      <Footer/>
-    
+      <Footer />
+
     </>
-    
+
   )
 
 }
