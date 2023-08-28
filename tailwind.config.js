@@ -13,7 +13,6 @@ module.exports = {
     require('tailwind-scrollbar'),
     require('@tailwindcss/line-clamp'),
     require('tailwindcss-textshadow'),
-    require("flowbite/plugin"),
   ],
   theme: {},
 };

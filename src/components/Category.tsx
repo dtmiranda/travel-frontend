@@ -1,50 +1,43 @@
-import { MdNordicWalking, MdFestival, MdBed, MdRestaurant } from 'react-icons/md'
-import { BsBank } from 'react-icons/bs'
 import Link from 'next/link'
+import Image from 'next/image'
+import { categories } from '../constants'
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi'
+
+export default function Category() {
+
+  const slideLeft = () => {
+    var slider = document.getElementById('slider')
+
+    if (slider)
+      slider.scrollLeft -= 200
+  }
+
+  const slideRight = () => {
+    var slider = document.getElementById('slider')
+
+    if (slider)
+      slider.scrollLeft += 200
+  }
+
+  return (
+    <div className="relative mt-4 flex justify-start items-center">
+      <HiOutlineChevronLeft className='cursor-pointer' onClick={slideLeft} size={30} color='#E5E7EB' />
+      <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth'>
+        {categories.map((category) => (
+          <div className='inline-block'>
+            <Link href={category.link} className="category">
+              <Image src={category.icon} loading='lazy' alt={category.alt} />
+              <p className="pt-1 pr-2 pl-2 text-lg font-medium text-gray-200 rounded ">{category.name}</p>
+            </Link>
+          </div>
 
 
-export default function Category(){
-  return(
-    <div className="my-4 flex justify-center flex-wrap">
+        ))}
+      </div>
+      <HiOutlineChevronRight className='cursor-pointer' onClick={slideRight} size={30} color='#E5E7EB' />
 
-      <Link href='/accomodation' className="categoryButton">
-        <div className='p-2 bg-red-50 rounded-full'>
-          <MdBed size={25} color='#ff8066'/>
-        </div>
-        <p className="pt-1 pr-2 pl-2 font-medium text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent">Accomodation</p>
-      </Link>
-      
 
-      <Link href="/restaurants" className="categoryButton">
-        <div className='p-2 bg-green-50 rounded-full'>
-          <MdRestaurant size={25} color='#7dcea0'/>
-        </div>
-        <p className="pt-2 pr-2 pl-2 font-medium text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent">Food & Drink</p>
-      </Link>
-
-      <Link href="/history" className="categoryButton">
-        <div className='p-2 bg-pink-50 rounded-full'>
-          <BsBank size={25} color='#f945df'/>
-        </div>
-        <p className="pt-2 pr-2 pl-2 font-medium text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent">Arte & History</p>
-      </Link>
-
-      <Link href="/trails" className="categoryButton">
-        <div className='p-2 bg-blue-50 rounded-full'>
-          <MdNordicWalking size={25} color='#5dade2'/>
-        </div>
-        <p className="pt-2 pr-2 pl-2 font-medium text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent">Trails</p>
-      </Link>
-
-      <Link href="/events" className="categoryButton">
-        <div className='p-2 bg-pink-50 rounded-full'>
-          <MdFestival size={25} color=' #c39bd3 '/>
-        </div>
-        <p className="pt-2 pr-2 pl-2 font-medium text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent">Events</p>
-      </Link>
-
-    
     </div>
-    
+
   )
 } 

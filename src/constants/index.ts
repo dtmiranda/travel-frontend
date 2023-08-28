@@ -1,3 +1,5 @@
+import { restaurant, bed, fair, museum, trail } from '../assets'
+
 
 
 export const navLinks = [
@@ -53,5 +55,45 @@ const testimonial = [
 
 
 
+const categories = [
+  {
+    name: "Accomodation",
+    link: "/accomodation",
+    icon: bed,
+    alt: "Accomodation"
+  },
 
-export { testimonial };
+  {
+    name: "Food & Drink",
+    link: "/restaurants",
+    icon: restaurant,
+    alt: "Food and drink"
+  },
+
+  {
+    name: "Arte & History",
+    link: "/history",
+    icon: museum,
+    alt: "Arte & History"
+  },
+
+  {
+    name: "Trails",
+    link: "/trails",
+    icon: trail,
+    alt: "Trails"
+  },
+
+  {
+    name: "Events",
+    link: "/events",
+    icon: fair,
+    alt: "Events"
+  },
+
+]
+
+
+
+
+export { testimonial, categories };

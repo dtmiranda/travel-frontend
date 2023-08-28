@@ -46,8 +46,8 @@ input {
   @apply cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-green-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0;
 }
 
-.categoryButton {
-  @apply h-32 p-2 m-2 w-40 flex justify-evenly items-center flex-col bg-white rounded-2xl border border-gray-200 hover:bg-gray-100
+.category {
+  @apply h-32 w-40 ml-6 flex justify-evenly items-center flex-col bg-transparent rounded-2xl hover:animate-pulse
 }
 
 .aboutImage {
