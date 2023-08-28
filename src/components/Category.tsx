@@ -21,8 +21,8 @@ export default function Category() {
 
   return (
     <div className="relative mt-4 flex justify-start items-center">
-      <HiOutlineChevronLeft className='cursor-pointer' onClick={slideLeft} size={30} color='#E5E7EB' />
-      <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth'>
+      <HiOutlineChevronLeft className='cursor-pointer opacity-50 hover:opacity-100' onClick={slideLeft} size={30} color='#E5E7EB' />
+      <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
         {categories.map((category) => (
           <div className='inline-block'>
             <Link href={category.link} className="category">
@@ -34,7 +34,7 @@ export default function Category() {
 
         ))}
       </div>
-      <HiOutlineChevronRight className='cursor-pointer' onClick={slideRight} size={30} color='#E5E7EB' />
+      <HiOutlineChevronRight className='cursor-pointer opacity-50 hover:opacity-100' onClick={slideRight} size={30} color='#E5E7EB' />
 
 
     </div>
