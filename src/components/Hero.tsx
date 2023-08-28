@@ -8,18 +8,16 @@ const Hero = () => {
   return (
     <>
 
-      <section className="flex flex-col pt-10 space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
+      <section className="space-y-2 py-6 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
 
         <Image
-          className="absolute top-0 -z-10 h-[98vh] w-screen contrast-125 brightness-75"
+          className="absolute top-0 -z-10 h-[95vh] w-screen contrast-125 brightness-75"
           src={hero_bg}
-          alt=''
+          alt='hero background'
         />
 
-        <main>
-
-        </main>
-        <div className="max-w-7xl px-2 sm:px-6 lg:px-20">
+        
+        <div className="relative isolate max-w-7xl px-2 sm:px-6 lg:px-20">
           <div >
             <h1 className="text-left lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] pb-4 font-bold text-gray-100">
               Discover your next <br /> adventure.
@@ -27,7 +25,7 @@ const Hero = () => {
           </div>
 
           <form className="flex items-center mt-10">
-            {/* <label htmlFor="voice-search" className="sr-only">Search</label> */}
+            
 
             <div className="relative p-1 w-2/3 border-2 rounded-lg border-green-700">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -50,6 +48,7 @@ const Hero = () => {
           </form>
 
           <h3 className="mt-16 text-gray-100 text-2xl font-bold">Top categories</h3>
+          
           <Category />
 
         </div>
