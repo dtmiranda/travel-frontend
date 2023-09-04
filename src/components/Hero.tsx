@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
 
-      <section className="flex flex-col pt-10 space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
+      <section className="flex flex-col justify-center h-[98vh] space-y-2 py-16 md:space-y-4">
 
         <Image
           className="absolute top-0 -z-10 h-[98vh] w-screen contrast-125 brightness-75"
@@ -16,12 +16,9 @@ const Hero = () => {
           alt=''
         />
 
-        <main>
-
-        </main>
-        <div className="max-w-7xl px-2 sm:px-6 lg:px-20">
+        <div className="max-w-full px-2 sm:px-6 lg:px-32">
           <div >
-            <h1 className="text-left lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] pb-4 font-bold text-gray-100">
+            <h1 className="text-left lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[36px] lg:leading-[98px] pb-4 font-bold text-gray-100">
               Discover your next <br /> adventure.
             </h1>
           </div>
