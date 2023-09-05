@@ -91,9 +91,106 @@ const categories = [
     alt: "Events"
   },
 
+];
+
+const destinations = [
+  {
+    id: "1",
+    name: 'Hotel Edu Horizonte',
+    city: "Calheta",
+    price: 5500,
+    rating: 4.9,
+    amenities: [
+      "wifi",
+      "pool"
+    ],
+    photos: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e9/04/20/villa-morgana-resort.jpg?w=1200&h=-1&s=1'
+    ],
+
+  },
+
+  {
+    id: "2",
+    name: 'Hotel Edu Horizonte',
+    city: "Calheta",
+    price: 5500,
+    rating: 4.9,
+    amenities: [
+      "wifi",
+      "pool"
+    ],
+    photos: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e9/04/20/villa-morgana-resort.jpg?w=1200&h=-1&s=1'
+    ],
+
+  }, 
+  
+  {
+    id: "3",
+    name: 'Hotel Edu Horizonte',
+    city: "Calheta",
+    price: 5500,
+    rating: 4.9,
+    amenities: [
+      "wifi",
+      "pool"
+    ],
+    photos: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e9/04/20/villa-morgana-resort.jpg?w=1200&h=-1&s=1'
+    ],
+  }, 
+  
+  {
+    id: "4",
+    name: 'Hotel Edu Horizonte',
+    city: "Calheta",
+    price: 5500,
+    rating: 4.9,
+    amenities: [
+      "wifi",
+      "pool"
+    ],
+    photos: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e9/04/20/villa-morgana-resort.jpg?w=1200&h=-1&s=1'
+    ],
+
+  },
+  
+  {
+    id: "5",
+    name: 'Hotel Edu Horizonte',
+    city: "Calheta",
+    price: 5500,
+    rating: 4.9,
+    amenities: [
+      "wifi",
+      "pool"
+    ],
+    photos: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e9/04/20/villa-morgana-resort.jpg?w=1200&h=-1&s=1'
+    ],
+
+  }, 
+  
+  {
+    id: "6",
+    name: 'Hotel Edu Horizonte',
+    city: "Calheta",
+    price: 5500,
+    rating: 4.9,
+    amenities: [
+      "wifi",
+      "pool"
+    ],
+    photos: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e9/04/20/villa-morgana-resort.jpg?w=1200&h=-1&s=1'
+    ],
+
+  },
 ]
 
 
 
 
-export { testimonial, categories };
+export { testimonial, categories, destinations };

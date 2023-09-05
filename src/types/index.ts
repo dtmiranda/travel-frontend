@@ -32,6 +32,8 @@ export interface RestaurantProps{
   name: string;
   description: string;
   address: string;
+  price: number
+  rating: number;
   whatsapp: string;
   email: string;
   website: string;
@@ -42,3 +44,21 @@ export interface RestaurantProps{
   cityId: string;
   
 }
+
+export interface AccomodationProps{
+  id?: string;
+  name: string;
+  city: string
+  address?: string;
+  state?: string;
+  phone?: string;
+  price: number
+  rating: number
+  amenities?: string[];
+  email?: string;
+  website?: string;
+  photos?: string[]
+  Review?:string
+
+}
+
