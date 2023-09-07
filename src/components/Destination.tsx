@@ -5,78 +5,82 @@ import { destinations } from "../constants"
 import { AccomodationProps } from "../types";
 
 interface destinationCard {
-  destination: AccomodationProps
+	destination: AccomodationProps
 }
 
 
 const DestinationCard = ({ destination }: destinationCard) => (
-  <div className="rounded-2xl shadow-xl">
-    <a href="#" className="">
-      <Image src={`${destination.photos}`} height={15} width={23} alt="product image" />
-    </a>
+	<div className="">
+		<div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+			<a href="#" className="">
+				<img className="h-full w-full object-cover object-center lg:h-full lg:w-full" src={`${destination.photos}`} alt="product image" />
+			</a>
+		</div>
 
 
 
-    <div className="p-4">
-      <div className="flex justify-between items-start flex-row">
-        <a href="#">
-          <h5 className="text- font-semibold tracking-tight text-gray-700 hover:text-gray-500 hover:underline">{destination.name}</h5>
-        </a>
+		<div className="pt-1">
+			<div className="flex justify-between items-center flex-row">
 
-        <div className="flex justify-center items-center">
-          <MdOutlineStarHalf size={18} color='ffff' />
-          <p className="pl-2 text-base font-light text-gray-800">{destination.rating}</p>
-        </div>
+				<h5 className="text-lg font-semibold tracking-tight text-gray-700">{destination.name}</h5>
 
 
-      </div>
+				<div className="flex justify-center items-center text-green-900">
+					<MdOutlineStarHalf size={18} />
+					<p className="pl-1 text-base font-light">{destination.rating}</p>
+				</div>
 
-      <p className="py-1 text-sm font-light text-gray-600">{destination.address}</p>
 
 
-      <div className="flex justify-start items-center">
-        <span className="text-base font-semibold text-gray-700">{destination.price}</span>
-        <p className="pl-1 text-base font-light text-gray-700"> night</p>
+			</div>
 
-      </div>
-    </div>
+			<p className="text-sm font-light text-gray-900">{destination.city}</p>
 
-  </div>
+
+			<div className="flex justify-start items-center">
+				<span className="text-base font-semibold text-gray-700">{destination.price}</span>
+				<p className="pl-1 text-sm font-light text-gray-700"> /night</p>
+
+			</div>
+		</div>
+
+	</div>
 
 )
 
 
 
 export default function Destination() {
-  return (
-    <>
-      <h5 className="text-transparent text-center bg-clip-text mt-16 mb-3 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
-        Popular
-        <span className='text-green-900'> Destination</span>
-      </h5>
+	return (
 
-      <p className="pb-4 text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
-        Visite memorible places
-      </p>
+		<section className="mx-auto px-2 sm:px-6 lg:px-32">
+			<h5 className="text-gray-700 text-center bg-clip-text mb-3 text-3xl font-extrabold tracking-tight leading-none md:text-3xl lg:text-4xl ">
+				Popular
+				<span className='text-green-900'> Destination</span>
+			</h5>
 
-      <div className='flex justify-start flex-col, items-center flex-wrap'>
-        {destinations.map((destination) => {
-          return (
-            <div key={destination.id}>
-              <DestinationCard destination={destination} />
+			<p className="pb-4 text-xl text-gray-500 text-center  dark:text-gray-600">
+				Visite memorible places
+			</p>
+			<div className="mx-auto max-w-2xl pb-16 px-1 lg:max-w-7xl">
+				<div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+					{destinations.map((destination) => {
+						return (
+							<div key={destination.id} className="group relative">
+								<a href="">
+									<DestinationCard destination={destination} />
+								</a>
+								
 
-            </div>
-          )
-        })
+							</div>
+						)
+					})
 
-        }
-      </div>
-      <div className="w-full p-2 md:w-1/2 md:my-1.5 md:mb lg:float-left lg:w-1/4">
+					}
+				</div>
+			</div>
 
-      </div>
+		</section>
 
-
-    </>
-
-  )
+	)
 }
