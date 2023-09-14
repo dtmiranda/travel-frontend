@@ -190,7 +190,27 @@ const destinations = [
   },
 ]
 
+const places = [
+  {
+    id: "1",
+    name:"hotel",
+    imgLink:"http://www.multiviagenstour.cv/uploads/images/hotels/slider/134231_32.jpg"
+  },
+
+  {
+    id: "2",
+    name:"rabelados",
+    imgLink:"https://lirp.cdn-website.com/02a7372f/dms3rep/multi/opt/IMG_5984-1920w.jpg"
+  },
+
+  {
+    id: "3",
+    name:"rabelados",
+    imgLink:"https://lidermagazine.sapo.pt/wp-content/uploads/Leading-Life_Destaque-900x600-1.jpg"
+  }
+]
 
 
 
-export { testimonial, categories, destinations };
+
+export { testimonial, categories, destinations, places };

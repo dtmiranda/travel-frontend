@@ -4,10 +4,10 @@
 
 
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
 /* START:General styles */
@@ -51,5 +51,5 @@ input {
 }
 
 .aboutImage {
-  @apply w-full
+  @apply w-[300px] h-[300px] object-cover
 }
