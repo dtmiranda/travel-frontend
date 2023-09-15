@@ -1,17 +1,14 @@
 import Image from 'next/image'
 
-import { Navbar, Hero, Footer, Destination } from '../src/components'
+import { Navbar, Hero, Footer, Destination, AboutUs, TripPlanner } from '../src/components'
 import Header from '../src/components/NavBar'
 import Category from '../src/components/Category'
 import DestinationCard from '../src/components/Destination'
 import TrailCard from '../src/components/TrailCard'
 import Head from 'next/head'
 import Bunner from '../src/components/Hero'
-/* 
-import aldeia from '../assets/images/aldeia.jpg'
-import piscina from '../assets/images/piscina.jpg'
-import serra from '../assets/images/serra.jpg' */
-import CustomerSays from '../src/components/CustomerSays'
+
+import CustomerSays from '../src/components/Testimonials'
 import Newsletter from '../src/components/Newsletter'
 
 
@@ -65,6 +62,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Destination />
+      <TripPlanner />
+      <AboutUs />
       
 
 
@@ -76,49 +75,7 @@ export default function Home() {
           
 
 
-          <section className=' py-8'>
-            <div className=' flex justify-center flex-col items-center'>
-              <h5 className="text-transparent text-center bg-clip-text mt-16 mb-3 text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
-                <span className='text-green-900'>About </span> Us
-              </h5>
-              <p className="pb-6 text-gray-500 text-center sm:text-sm md:text-lg lg:text-xl dark:text-gray-600">
-                We planed beautiful destinations every weekend
-              </p>
-
-            </div>
-
-            {/* <div className='pb-4 flex justify-between flex-row items-center'>
-              <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg'>
-                <Image className='aboutImage' src={serra} alt={''} />
-              </div>
-
-              <div className='m-4 max-w-sm rounded-2xl overflow-hidden shadow-lg'>
-                <Image className='aboutImage' src={aldeia} alt={''} />
-
-              </div>
-
-              <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg'>
-                <Image className='aboutImage' src={piscina} alt={''} />
-
-              </div>
-
-
-            </div> */}
-
-            <div>
-              <p className="font-light text-center text-gray-500 lg:mb-16 sm:text-xl">
-                Arranging a healthy and beautiful vacations is our main gol. We <br />
-                consider our seccess to be able to offer our users the right <br />
-                journey and a enjoyable holiday
-              </p>
-
-            </div>
-
-
-
-          </section>
-
-
+          
           <section>
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
               <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">

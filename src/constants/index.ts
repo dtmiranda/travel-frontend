@@ -211,6 +211,52 @@ const places = [
 ]
 
 
+const tripPlanners = [
+  {
+    id:"1",
+    name:"Santa Catarina",
+    imgUrl:"https://inforpress.cv/wp-content/uploads/2021/11/Igreja-de-Santa-Catarina-Assomada.jpg",
+    imgAlt:"Santa Catarina"
+  },
+
+  {
+    id:"2",
+    name:"Calheta São Miguel",
+    imgUrl:"https://www.asemana.publ.cv/IMG/arton149936.png",
+    imgAlt:"Calheta São Miguel"
+  },
 
 
-export { testimonial, categories, destinations, places };
+  {
+    id:"3",
+    name:"São Lourenço dos Orgãos",
+    imgUrl:"https://opais.cv/wp-content/uploads/sao-loren%C3%A7o-dos-Orgaos-1-1.jpg",
+    imgAlt:"São Lourenço dos Orgãos"
+  },
+
+  {
+    id:"4",
+    name:"Tarrafal",
+    imgUrl:"https://cdn.getyourguide.com/img/tour/5e0df879809da.jpeg/97.jpg",
+    imgAlt:"Tarrafal"
+  },
+
+  {
+    id:"5",
+    name:"São Salvador do Mundo",
+    imgUrl:"https://www.anacao.cv/wp-content/uploads/2022/06/Cidade-Igreja-Sao-Salvador-Mundo.jpg",
+    imgAlt:"São Salvador do Mundo"
+  },
+  
+  {
+    id:"6",
+    name:"Santa Cruz",
+    imgUrl:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/340386501.jpg?k=9c72a92012f19b4d66096be33e4d3c731e98e505ec37cfc37fca633cf514628d&o=&hp=1",
+    imgAlt:"Santa Cruz"
+  },
+]
+
+
+
+
+export { testimonial, categories, destinations, places, tripPlanners };

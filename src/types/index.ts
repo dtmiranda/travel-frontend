@@ -62,3 +62,11 @@ export interface AccomodationProps{
 
 }
 
+export interface TripPlannerProps{
+  id: string;
+  name: string;
+  imgUrl: string;
+  imgAlt: string;
+
+}
+
