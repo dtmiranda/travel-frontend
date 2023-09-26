@@ -17,9 +17,9 @@ export const navLinks = [
   },
 ];
 
-const testimonial = [
+const testimonials = [
   {
-    id: 1,
+    id: "1",
     username: "Bonnie Green",
     user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
     city: "California",
@@ -27,7 +27,7 @@ const testimonial = [
 
   },
   {
-    id: 2,
+    id: "2",
     username: "Bonnie Green",
     user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
     city: "California",
@@ -35,7 +35,7 @@ const testimonial = [
 
   },
   {
-    id: 3,
+    id: "3",
     username: "Bonnie Green",
     user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
     city: "California",
@@ -43,7 +43,7 @@ const testimonial = [
 
   },
   {
-    id: 4,
+    id: "4",
     username: "Bonnie Green",
     user_avatar: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
     city: "California",
@@ -259,4 +259,4 @@ const tripPlanners = [
 
 
 
-export { testimonial, categories, destinations, places, tripPlanners };
+export { testimonials, categories, destinations, places, tripPlanners };

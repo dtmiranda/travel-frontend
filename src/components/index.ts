@@ -5,6 +5,7 @@ import Category from "./Category"
 import Destination from "./Destination";
 import AboutUs from "./HotelPlaces";
 import TripPlanner from "./TripPlanner"
+import Testimonials from "./Testimonials";
 
 
 
@@ -16,4 +17,5 @@ export {
   Destination,
   AboutUs,
   TripPlanner,
+  Testimonials,
 }
