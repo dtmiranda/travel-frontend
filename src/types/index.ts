@@ -27,7 +27,7 @@ export interface TestimonialProps {
   message: string;
 }
 
-export interface RestaurantProps{
+export interface RestaurantProps {
   id: string;
   name: string;
   description: string;
@@ -42,27 +42,28 @@ export interface RestaurantProps{
   cuisine: string;
   menu: string;
   cityId: string;
-  
+
 }
 
-export interface AccomodationProps{
-  id?: string;
+export interface AccomodationProps {
+  id: string;
   name: string;
-  city: string
+  city: string;
+  price: string;
+  description: string;
   address?: string;
-  state?: string;
   phone?: string;
-  price: number
   rating: number
   amenities?: string[];
   email?: string;
   website?: string;
   photos?: string[]
-  Review?:string
+  reviews?: number
+  details?: string
 
 }
 
-export interface TripPlannerProps{
+export interface TripPlannerProps {
   id: string;
   name: string;
   imgUrl: string;

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { MdOutlineStarHalf } from 'react-icons/md'
 import cardImage from '../assets/images/VilaMorgana3.jpeg'
-import { destinations } from "../constants"
+import { accomodations } from "../constants"
 import { AccomodationProps } from "../types";
+import { useParams } from "react-router-dom";
+
+const { id } = useParams()
 
 interface destinationCard {
 	destination: AccomodationProps
@@ -12,7 +15,7 @@ interface destinationCard {
 const DestinationCard = ({ destination }: destinationCard) => (
 	<div className="">
 		<div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-			<a href="#" className="">
+			<a href={`accomodation_details/${id}`} className="">
 				<img className="h-full w-full object-cover object-center lg:h-full lg:w-full" src={`${destination.photos}`} alt="product image" />
 			</a>
 		</div>
@@ -64,13 +67,13 @@ export default function Destination() {
 			</p>
 			<div className="mx-auto max-w-2xl pb-16 px-1 lg:max-w-7xl">
 				<div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
-					{destinations.map((destination) => {
+					{accomodations.map((accomodation) => {
 						return (
-							<div key={destination.id} className="group relative">
+							<div key={accomodation.id} className="group relative">
 								<a href="">
-									<DestinationCard destination={destination} />
+									<DestinationCard destination={accomodation} />
 								</a>
-								
+
 
 							</div>
 						)

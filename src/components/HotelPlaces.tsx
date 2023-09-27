@@ -7,8 +7,8 @@ export default function HotelPlaces() {
 
     <section className="mx-auto px-2 sm:px-6 lg:px-32">
 
-      <div className=' flex justify-center flex-col items-center'>
-        <h5 className="text-center bg-clip-text mb- text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
+      <div className='mt-16 flex justify-center flex-col items-center'>
+        <h5 className="text-center bg-clip-text text-2xl font-bold tracking-tight leading-none md:text-3xl lg:text-4xl text-gray-700">
           <span className='text-green-900'>Top Hotel &  </span>
           Places
         </h5>

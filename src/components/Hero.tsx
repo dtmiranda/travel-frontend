@@ -11,7 +11,7 @@ const Hero = () => {
       <section className="flex flex-col justify-center h-[98vh] space-y-2 py-16 md:space-y-4">
 
         <Image
-          className="absolute top-0 -z-10 h-[98vh] w-screen contrast-125 brightness-75"
+          className="object-cover absolute top-0 -z-10 h-[98vh] w-screen contrast-125 brightness-75"
           src={hero_bg}
           alt=''
         />
